@@ -62,7 +62,7 @@ export default function HeroSection() {
         </div>
 
         {/* Stats bar */}
-        <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
           {[
             { value: '4', label: 'Ligas Activas' },
             { value: '800+', label: 'Jugadores' },

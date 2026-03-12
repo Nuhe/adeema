@@ -42,7 +42,7 @@ export default function FanSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-violet-400 mb-4 px-3 py-1 bg-violet-500/10 border border-violet-500/20 rounded-full">
             Comunidad
           </span>
@@ -59,7 +59,7 @@ export default function FanSection() {
         </div>
 
         {/* Benefits grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {benefits.map((benefit) => (
             <div
               key={benefit.title}

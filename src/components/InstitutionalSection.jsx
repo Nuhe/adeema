@@ -24,7 +24,7 @@ export default function InstitutionalSection() {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-900/10 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
           {/* Left col - text */}
           <div>
             <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-4 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full">
@@ -90,7 +90,7 @@ export default function InstitutionalSection() {
         </div>
 
         {/* Federal badge */}
-        <div className="mt-16 rounded-2xl border border-primary-500/20 bg-primary-500/5 p-8 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+        <div className="mt-10 rounded-2xl border border-primary-500/20 bg-primary-500/5 p-6 flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
           <div className="text-5xl flex-shrink-0">🗺️</div>
           <div>
             <h3 className="text-white font-bold text-xl mb-2">Alcance Federal</h3>

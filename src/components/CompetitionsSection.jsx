@@ -14,7 +14,7 @@ export default function CompetitionsSection() {
         />
 
         {/* Disciplines */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-12">
           {disciplines.map((d) => (
             <div
               key={d.id}
@@ -30,7 +30,7 @@ export default function CompetitionsSection() {
         </div>
 
         {/* Who can organize */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
           <div>
             <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-4 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full">
               Organizadores

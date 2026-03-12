@@ -17,9 +17,9 @@ export default function App() {
         <HeroSection />
         <InstitutionalSection />
         <MissionVisionSection />
+        <FanSection />
         <LeaguesSection />
         <CompetitionsSection />
-        <FanSection />
         <NewsSection />
         <SponsorsSection />
       </main>

@@ -15,7 +15,7 @@ export default function SponsorsSection() {
         />
 
         {/* Opportunities grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
           {sponsorOpportunities.map((opp) => (
             <div
               key={opp.title}
@@ -31,7 +31,7 @@ export default function SponsorsSection() {
         </div>
 
         {/* Sponsor tiers */}
-        <div className="mb-16">
+        <div className="mb-10">
           <h3 className="text-white font-bold text-2xl text-center mb-10">
             Niveles de Sponsoreo
           </h3>
