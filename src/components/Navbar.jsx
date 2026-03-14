@@ -3,10 +3,10 @@ import Button from './ui/Button';
 
 const navLinks = [
   { label: 'Institución', href: '#institucional' },
+  { label: 'Misión', href: '#mision-vision' },
+  { label: 'Área FAN', href: '#fan' },
   { label: 'Ligas', href: '#ligas' },
-  { label: 'Competencias', href: '#competencias' },
-  { label: 'Noticias', href: '#noticias' },
-  { label: 'Sponsors', href: '#sponsors' },
+  { label: 'Alianzas', href: '#alianzas' },
 ];
 
 export default function Navbar() {
@@ -24,13 +24,13 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-dark/95 backdrop-blur-md border-b border-white/5 shadow-xl shadow-black/20'
-          : 'bg-transparent'
+          : 'bg-dark/80 backdrop-blur-md border-b border-white/5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="#inicio" className="flex items-center gap-3 group">
             <div className="w-9 h-9 rounded-lg bg-primary-600 flex items-center justify-center text-white font-black text-sm glow-blue group-hover:bg-primary-500 transition-colors">
               A
             </div>
@@ -45,12 +45,12 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-slate-400 hover:text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-white/5 transition-all duration-200"
+                className="text-slate-400 hover:text-white text-sm font-medium px-3 lg:px-4 py-2 rounded-lg hover:bg-white/5 transition-all duration-200"
               >
                 {link.label}
               </a>
@@ -59,10 +59,10 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm" href="#fan">
+            <Button variant="fan" size="sm" href="#fan">
               Área FAN
             </Button>
-            <Button variant="primary" size="sm" href="#contacto">
+            <Button variant="primary" size="sm" href="#sumate" className="shadow-primary-900/30">
               Sumate
             </Button>
           </div>
@@ -101,10 +101,22 @@ export default function Navbar() {
               </a>
             ))}
             <div className="flex gap-3 pt-4 border-t border-white/10 mt-2">
-              <Button variant="ghost" size="sm" href="#fan" className="flex-1 justify-center">
+              <Button
+                variant="fan"
+                size="sm"
+                href="#fan"
+                className="flex-1 justify-center"
+                onClick={() => setMenuOpen(false)}
+              >
                 Área FAN
               </Button>
-              <Button variant="primary" size="sm" href="#contacto" className="flex-1 justify-center">
+              <Button
+                variant="primary"
+                size="sm"
+                href="#sumate"
+                className="flex-1 justify-center"
+                onClick={() => setMenuOpen(false)}
+              >
                 Sumate
               </Button>
             </div>

@@ -20,11 +20,11 @@ const disciplines = [
 
 export default function InstitutionalSection() {
   return (
-    <section id="institucional" className="section-padding bg-dark-100 relative overflow-hidden">
+    <section id="institucional" className="section-padding bg-dark-100 relative overflow-hidden border-t border-white/5">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-900/10 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
+        <div className="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-10 items-center mb-12">
           {/* Left col - text */}
           <div>
             <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-4 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full">
@@ -37,17 +37,14 @@ export default function InstitutionalSection() {
             </h2>
             <div className="space-y-4 text-slate-400 leading-relaxed">
               <p>
-                ADEEMA es la organización dedicada al desarrollo, promoción y organización de los deportes
-                electrónicos y electromecánicos en Argentina. A través de una red de jugadores, clubes, ligas,
-                instituciones educativas y organizadores, construimos el ecosistema deportivo del futuro.
+                ADEEMA desarrolla, promueve y organiza los deportes electrónicos y electromecánicos en Argentina.
+                Articulamos jugadores, clubes, ligas, instituciones educativas, marcas y organizadores dentro de
+                un mismo ecosistema competitivo.
               </p>
               <p>
-                Trabajamos para consolidar competencias estructuradas, desarrollar talento emergente y generar
-                nuevas oportunidades dentro de las disciplinas que combinan tecnología, habilidad y estrategia.
-              </p>
-              <p>
-                Con un enfoque <span className="text-white font-medium">federal</span>, ADEEMA está presente
-                en distintas provincias y ciudades del país, conectando el ecosistema de norte a sur y de este a oeste.
+                Nuestro foco está en consolidar competencias estructuradas, abrir oportunidades para el talento
+                emergente y construir una plataforma con visión <span className="text-white font-medium">federal</span>,
+                sostenible y profesional.
               </p>
             </div>
           </div>

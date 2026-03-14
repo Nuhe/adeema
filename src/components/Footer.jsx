@@ -11,8 +11,8 @@ const footerLinks = {
   ],
   Comunidad: [
     { label: 'Área FAN', href: '#fan' },
-    { label: 'Sponsors', href: '#sponsors' },
-    { label: 'Sumate', href: '#contacto' },
+    { label: 'Alianzas', href: '#alianzas' },
+    { label: 'Sumate', href: '#sumate' },
   ],
 };
 

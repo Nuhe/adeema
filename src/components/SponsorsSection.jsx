@@ -4,14 +4,14 @@ import Button from './ui/Button';
 
 export default function SponsorsSection() {
   return (
-    <section id="sponsors" className="section-padding bg-dark-100 relative overflow-hidden">
+    <section id="alianzas" className="section-padding bg-dark-100 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-dark to-dark-100 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          label="Patrocinios"
-          title="Invertí en el ecosistema deportivo tecnológico"
-          subtitle="ADEEMA conecta marcas y empresas con una audiencia apasionada, joven y en constante crecimiento. Ser sponsor es apostar por el deporte del futuro."
+          label="Alianzas y Patrocinios"
+          title="Actores que potencian el ecosistema ADEEMA"
+          subtitle="ADEEMA conecta instituciones, marcas y empresas con una comunidad joven, activa y en crecimiento. Las alianzas estratégicas amplifican el alcance de cada liga, torneo y programa."
         />
 
         {/* Opportunities grid */}
@@ -72,14 +72,14 @@ export default function SponsorsSection() {
           <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
           <div className="relative z-10">
             <h3 className="text-3xl font-bold text-white mb-4">
-              ¿Tu empresa quiere ser parte del ecosistema?
+              ¿Tu organización quiere ser parte del ecosistema?
             </h3>
             <p className="text-slate-400 text-base max-w-xl mx-auto mb-8 leading-relaxed">
-              Contactanos y diseñamos juntos una propuesta de sponsoreo a medida que se adapte
-              a tus objetivos de marca y presupuesto.
+              Diseñamos propuestas de colaboración y sponsoreo alineadas a objetivos institucionales,
+              de marca y de desarrollo territorial.
             </p>
-            <Button variant="primary" size="lg" href="#contacto">
-              Quiero ser sponsor
+            <Button variant="primary" size="lg" href="#sumate">
+              Quiero ser aliado
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

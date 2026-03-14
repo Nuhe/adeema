@@ -35,7 +35,7 @@ const benefits = [
 
 export default function FanSection() {
   return (
-    <section id="fan" className="section-padding relative overflow-hidden bg-dark-100">
+    <section id="fan" className="section-padding relative overflow-hidden bg-dark-100 border-y border-white/5">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-violet-900/10 via-transparent to-primary-900/10 pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
@@ -56,6 +56,11 @@ export default function FanSection() {
             El espacio pensado para seguidores, jugadores ocasionales y todos aquellos que quieren
             ser parte del ecosistema sin competir. Tu lugar en ADEEMA.
           </p>
+          <div className="mt-6 flex justify-center">
+            <Button variant="fan" size="md" href="#sumate">
+              Quiero entrar al Área FAN
+            </Button>
+          </div>
         </div>
 
         {/* Benefits grid */}
@@ -86,7 +91,7 @@ export default function FanSection() {
               Miles de personas ya forman parte del Área FAN de ADEEMA. Únite y comenzá a vivir
               el ecosistema desde adentro.
             </p>
-            <Button variant="accent" size="xl" href="#contacto">
+            <Button variant="fan" size="xl" href="#sumate">
               Unite al Área FAN
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

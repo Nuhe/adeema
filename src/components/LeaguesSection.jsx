@@ -1,5 +1,6 @@
 import { leagues } from '../data/leagues';
 import SectionHeader from './ui/SectionHeader';
+import Button from './ui/Button';
 
 export default function LeaguesSection() {
   return (
@@ -68,9 +69,9 @@ export default function LeaguesSection() {
           <p className="text-slate-400 mb-4 text-sm">
             ¿Querés organizar una liga en tu ciudad, universidad o empresa?
           </p>
-          <button className="border border-primary-500/50 text-primary-400 hover:bg-primary-500/10 hover:border-primary-400 px-8 py-3 rounded-lg text-sm font-medium transition-all duration-200">
+          <Button variant="secondary" size="md" href="#sumate">
             Contactá a ADEEMA
-          </button>
+          </Button>
         </div>
       </div>
     </section>

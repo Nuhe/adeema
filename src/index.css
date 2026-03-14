@@ -24,6 +24,18 @@
   #root {
     min-height: 100vh;
   }
+
+  section[id],
+  footer[id] {
+    scroll-margin-top: 6.5rem;
+  }
+
+  @media (min-width: 768px) {
+    section[id],
+    footer[id] {
+      scroll-margin-top: 7.5rem;
+    }
+  }
 }
 
 @layer utilities {

@@ -1,16 +1,35 @@
-# React + Vite
+# ADEEMA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing institucional de ADEEMA desarrollada con React, Vite y Tailwind CSS.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `npm run dev`: inicia el entorno local.
+- `npm run build`: genera la build de producción en `dist`.
+- `npm run lint`: ejecuta ESLint.
+- `npm run preview`: sirve la build local para validación final.
 
-## React Compiler
+## Publicación en GitHub Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+El repositorio queda preparado para deploy automático con GitHub Actions.
 
-## Expanding the ESLint configuration
+### Habilitación inicial
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Entrar a `Settings > Pages` del repositorio.
+2. En `Build and deployment`, elegir `GitHub Actions`.
+3. Hacer push a `main`.
+
+### Publicación automática
+
+Cada push a `main` ejecuta `.github/workflows/deploy.yml`, instala dependencias con `npm ci`, corre `npm run build` y publica `dist/` en GitHub Pages.
+
+### URL pública esperada
+
+Si el repositorio sigue siendo `Nuhe/adeema`, la web quedará disponible en:
+
+`https://nuhe.github.io/adeema/`
+
+## Notas de deploy
+
+- `vite.config.js` usa `base: '/adeema/'`, necesario para que assets y rutas estáticas funcionen en GitHub Pages.
+- Antes de publicar cambios futuros conviene correr `npm run lint` y `npm run build`.

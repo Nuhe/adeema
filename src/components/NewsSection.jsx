@@ -71,6 +71,8 @@ export default function NewsSection() {
 
   const featured = filtered.filter((n) => n.featured);
   const rest = filtered.filter((n) => !n.featured);
+  const featuredToShow = featured.slice(0, 1);
+  const restToShow = rest.slice(0, 3);
 
   return (
     <section id="noticias" className="section-padding bg-dark relative">
@@ -101,18 +103,18 @@ export default function NewsSection() {
         </div>
 
         {/* Featured articles */}
-        {featured.length > 0 && (
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            {featured.slice(0, 2).map((article) => (
+        {featuredToShow.length > 0 && (
+          <div className="grid gap-6 mb-6">
+            {featuredToShow.map((article) => (
               <NewsCard key={article.id} article={article} featured />
             ))}
           </div>
         )}
 
         {/* Rest of articles */}
-        {rest.length > 0 && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {rest.map((article) => (
+        {restToShow.length > 0 && (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {restToShow.map((article) => (
               <NewsCard key={article.id} article={article} />
             ))}
           </div>
