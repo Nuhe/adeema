@@ -4,7 +4,7 @@ const footerLinks = {
   Institución: [
     { label: 'Quiénes somos', href: '#institucional' },
     { label: 'Misión y Visión', href: '#mision-vision' },
-    { label: 'Noticias', href: '#noticias' },
+    { label: 'Competencias', href: '#competencias' },
   ],
   Competencias: [
     { label: 'Ligas', href: '#ligas' },

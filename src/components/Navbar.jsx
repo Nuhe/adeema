@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'Misión', href: '#mision-vision' },
   { label: 'Área FAN', href: '#fan' },
   { label: 'Ligas', href: '#ligas' },
+  { label: 'Competencias', href: '#competencias' },
   { label: 'Alianzas', href: '#alianzas' },
 ];
 

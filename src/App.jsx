@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+import QuickNavSection from './components/QuickNavSection';
 import StatsSection from './components/StatsSection';
 import Footer from './components/Footer';
 import FinalCTASection from './components/FinalCTASection';
@@ -11,7 +12,6 @@ const FanSection = lazy(() => import('./components/FanSection'));
 const LeaguesSection = lazy(() => import('./components/LeaguesSection'));
 const CompetitionsSection = lazy(() => import('./components/CompetitionsSection'));
 const SponsorsSection = lazy(() => import('./components/SponsorsSection'));
-const NewsSection = lazy(() => import('./components/NewsSection'));
 
 function SectionsFallback() {
   return (
@@ -31,6 +31,7 @@ export default function App() {
       <Navbar />
       <main className="overflow-x-hidden">
         <HeroSection />
+        <QuickNavSection />
         <StatsSection />
         <Suspense fallback={<SectionsFallback />}>
           <InstitutionalSection />
@@ -39,7 +40,6 @@ export default function App() {
           <LeaguesSection />
           <CompetitionsSection />
           <SponsorsSection />
-          <NewsSection />
           <FinalCTASection />
         </Suspense>
       </main>

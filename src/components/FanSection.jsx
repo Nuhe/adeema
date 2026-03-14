@@ -34,6 +34,8 @@ const benefits = [
 ];
 
 export default function FanSection() {
+  const featuredBenefits = benefits.slice(0, 4);
+
   return (
     <section id="fan" className="section-padding relative overflow-hidden bg-dark-100 border-y border-white/5">
       {/* Background */}
@@ -64,11 +66,11 @@ export default function FanSection() {
         </div>
 
         {/* Benefits grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-          {benefits.map((benefit) => (
+        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-8">
+          {featuredBenefits.map((benefit) => (
             <div
               key={benefit.title}
-              className="group p-6 rounded-xl border border-white/5 bg-dark-200/50 hover:border-violet-500/30 hover:bg-violet-500/5 transition-all duration-300"
+              className="group p-5 rounded-xl border border-white/5 bg-dark-200/50 hover:border-violet-500/30 hover:bg-violet-500/5 transition-all duration-300"
             >
               <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
                 {benefit.icon}
@@ -80,23 +82,28 @@ export default function FanSection() {
         </div>
 
         {/* CTA block */}
-        <div className="relative rounded-2xl overflow-hidden border border-violet-500/30 bg-gradient-to-br from-violet-900/30 to-primary-900/20 p-8 md:p-12 text-center">
-          <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
-          <div className="relative z-10">
-            <div className="text-5xl mb-6">🎮</div>
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Sumate a la comunidad FAN
-            </h3>
-            <p className="text-slate-300 text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
-              Miles de personas ya forman parte del Área FAN de ADEEMA. Únite y comenzá a vivir
-              el ecosistema desde adentro.
-            </p>
-            <Button variant="fan" size="xl" href="#sumate">
-              Unite al Área FAN
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Button>
+        <div className="rounded-2xl border border-violet-500/30 bg-gradient-to-br from-violet-900/25 to-primary-900/10 p-6 md:p-8">
+          <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                Una comunidad pensada para seguir conectados con ADEEMA.
+              </h3>
+              <p className="text-slate-300 leading-relaxed">
+                Simplificamos esta sección para que comunique rápido su propuesta: acceso anticipado,
+                experiencias, novedades y comunidad en un solo lugar.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              {['Novedades y alertas', 'Eventos y experiencias', 'Comunidad y contenidos'].map((item) => (
+                <div key={item} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200">
+                  {item}
+                </div>
+              ))}
+              <Button variant="fan" size="lg" href="#sumate" className="mt-2">
+                Unite al Área FAN
+              </Button>
+            </div>
           </div>
         </div>
       </div>
