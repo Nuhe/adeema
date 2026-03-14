@@ -27,13 +27,13 @@
 
   section[id],
   footer[id] {
-    scroll-margin-top: 6.5rem;
+    scroll-margin-top: 8.5rem;
   }
 
   @media (min-width: 768px) {
     section[id],
     footer[id] {
-      scroll-margin-top: 7.5rem;
+      scroll-margin-top: 10rem;
     }
   }
 }
@@ -80,6 +80,15 @@
     transform: translateY(-6px);
     box-shadow: 0 20px 40px rgba(45, 94, 255, 0.2);
     border-color: rgba(45, 94, 255, 0.5);
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 
   .section-padding {

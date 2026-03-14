@@ -1,7 +1,6 @@
 import { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import QuickNavSection from './components/QuickNavSection';
 import StatsSection from './components/StatsSection';
 import Footer from './components/Footer';
 import FinalCTASection from './components/FinalCTASection';
@@ -31,7 +30,6 @@ export default function App() {
       <Navbar />
       <main className="overflow-x-hidden">
         <HeroSection />
-        <QuickNavSection />
         <StatsSection />
         <Suspense fallback={<SectionsFallback />}>
           <InstitutionalSection />

@@ -3,12 +3,16 @@ import Button from './ui/Button';
 import { BRAND_ASSETS } from '../assets/brandAssets';
 
 const navLinks = [
+  { label: 'Inicio', href: '#inicio' },
+  { label: 'Impacto', href: '#metricas' },
   { label: 'Institución', href: '#institucional' },
   { label: 'Misión', href: '#mision-vision' },
   { label: 'Área FAN', href: '#fan' },
   { label: 'Ligas', href: '#ligas' },
   { label: 'Competencias', href: '#competencias' },
   { label: 'Alianzas', href: '#alianzas' },
+  { label: 'Sumate', href: '#sumate' },
+  { label: 'Contacto', href: '#contacto' },
 ];
 
 export default function Navbar() {
@@ -30,7 +34,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3 group">
             <img
@@ -43,19 +47,6 @@ export default function Navbar() {
             />
             <span className="sr-only">ADEEMA</span>
           </a>
-
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-slate-400 hover:text-white text-sm font-medium px-3 lg:px-4 py-2 rounded-lg hover:bg-white/5 transition-all duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
@@ -84,6 +75,20 @@ export default function Navbar() {
             )}
           </button>
         </div>
+
+        <nav className="hidden md:block border-t border-white/5">
+          <div className="flex items-center gap-2 overflow-x-auto py-3 no-scrollbar">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="shrink-0 rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 transition-all duration-200 hover:border-primary-400/40 hover:bg-primary-500/10 hover:text-white"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </nav>
       </div>
 
       {/* Mobile menu */}
