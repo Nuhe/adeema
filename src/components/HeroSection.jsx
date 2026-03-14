@@ -1,4 +1,5 @@
 import Button from './ui/Button';
+import { BRAND_ASSETS } from '../assets/brandAssets';
 
 export default function HeroSection() {
   return (
@@ -17,6 +18,17 @@ export default function HeroSection() {
       <div className="absolute bottom-20 right-8 w-16 h-16 border-b-2 border-r-2 border-accent/30 rounded-br-lg" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="mb-6 md:mb-8 animate-fade-in-up">
+          <img
+            src={BRAND_ASSETS.emblemNegative}
+            alt="Emblema ADEEMA"
+            className="mx-auto h-20 sm:h-24 md:h-28 w-auto object-contain drop-shadow-[0_0_30px_rgba(0,229,255,0.18)]"
+            loading="eager"
+            decoding="async"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-primary-500/10 border border-primary-500/30 rounded-full px-4 py-2 mb-8 md:mb-10 animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
@@ -38,6 +50,17 @@ export default function HeroSection() {
         >
           Asociación de Deportes Electrónicos y Electromecánicos de Argentina
         </p>
+
+        <div className="mb-8 md:mb-10 animate-fade-in-up" style={{ animationDelay: '0.15s' }}>
+          <img
+            src={BRAND_ASSETS.logoOnDark}
+            alt="Logo ADEEMA"
+            className="mx-auto h-10 sm:h-12 md:h-14 w-auto object-contain"
+            loading="eager"
+            decoding="async"
+            referrerPolicy="no-referrer"
+          />
+        </div>
 
         {/* Impact phrase */}
         <div className="max-w-4xl mx-auto mb-12 md:mb-14 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>

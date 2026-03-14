@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Button from './ui/Button';
+import { BRAND_ASSETS } from '../assets/brandAssets';
 
 const navLinks = [
   { label: 'Institución', href: '#institucional' },
@@ -31,17 +32,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-lg bg-primary-600 flex items-center justify-center text-white font-black text-sm glow-blue group-hover:bg-primary-500 transition-colors">
-              A
-            </div>
-            <div className="flex flex-col">
-              <span className="text-white font-bold text-lg leading-none tracking-wide">
-                ADEEMA
-              </span>
-              <span className="text-slate-400 text-xs leading-none hidden sm:block">
-                Deportes Electrónicos
-              </span>
-            </div>
+            <img
+              src={BRAND_ASSETS.logoOnDark}
+              alt="ADEEMA"
+              className="h-9 md:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+              loading="eager"
+              decoding="async"
+              referrerPolicy="no-referrer"
+            />
+            <span className="sr-only">ADEEMA</span>
           </a>
 
           {/* Desktop Nav */}

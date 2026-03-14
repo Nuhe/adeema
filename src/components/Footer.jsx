@@ -1,3 +1,5 @@
+import { BRAND_ASSETS } from '../assets/brandAssets';
+
 const footerLinks = {
   Institución: [
     { label: 'Quiénes somos', href: '#institucional' },
@@ -71,14 +73,15 @@ export default function Footer() {
         <div className="grid lg:grid-cols-5 gap-12 mb-12">
           {/* Brand col */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center text-white font-black">
-                A
-              </div>
-              <div>
-                <div className="text-white font-bold text-xl tracking-wide">ADEEMA</div>
-                <div className="text-slate-500 text-xs">Deportes Electrónicos y Electromecánicos</div>
-              </div>
+            <div className="mb-5">
+              <img
+                src={BRAND_ASSETS.logoOnDark}
+                alt="ADEEMA"
+                className="h-12 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               Asociación de Deportes Electrónicos y Electromecánicos de Argentina. Promovemos, organizamos
