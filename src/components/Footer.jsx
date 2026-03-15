@@ -1,4 +1,4 @@
-import { BRAND_ASSETS } from '../assets/brandAssets';
+import BrandMark from './ui/BrandMark';
 
 const footerLinks = {
   Institución: [
@@ -74,14 +74,7 @@ export default function Footer() {
           {/* Brand col */}
           <div className="lg:col-span-2">
             <div className="mb-5">
-              <img
-                src={BRAND_ASSETS.logoOnDark}
-                alt="ADEEMA"
-                className="h-12 w-auto object-contain"
-                loading="lazy"
-                decoding="async"
-                referrerPolicy="no-referrer"
-              />
+              <BrandMark size="md" withWordmark />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               Asociación de Deportes Electrónicos y Electromecánicos de Argentina. Promovemos, organizamos

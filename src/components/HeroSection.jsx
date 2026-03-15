@@ -1,5 +1,5 @@
 import Button from './ui/Button';
-import { BRAND_ASSETS } from '../assets/brandAssets';
+import BrandMark from './ui/BrandMark';
 
 export default function HeroSection() {
   return (
@@ -19,13 +19,9 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-5 md:mb-7 animate-fade-in-up">
-          <img
-            src={BRAND_ASSETS.emblemNegative}
-            alt="Emblema ADEEMA"
-            className="mx-auto h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-[0_0_30px_rgba(0,229,255,0.18)]"
-            loading="eager"
-            decoding="async"
-            referrerPolicy="no-referrer"
+          <BrandMark
+            size="hero"
+            badgeClassName="mx-auto shadow-[0_0_45px_rgba(0,229,255,0.18)]"
           />
         </div>
 

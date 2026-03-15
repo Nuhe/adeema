@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Button from './ui/Button';
-import { BRAND_ASSETS } from '../assets/brandAssets';
+import BrandMark from './ui/BrandMark';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
@@ -37,13 +37,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3 group">
-            <img
-              src={BRAND_ASSETS.logoOnDark}
-              alt="ADEEMA"
-              className="h-9 md:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
-              loading="eager"
-              decoding="async"
-              referrerPolicy="no-referrer"
+            <BrandMark
+              size="sm"
+              withWordmark
+              className="transition-transform duration-200 group-hover:scale-[1.02]"
+              wordmarkClassName="hidden sm:block"
             />
             <span className="sr-only">ADEEMA</span>
           </a>

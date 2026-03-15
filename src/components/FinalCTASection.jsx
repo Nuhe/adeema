@@ -1,5 +1,5 @@
 import Button from './ui/Button';
-import { BRAND_ASSETS } from '../assets/brandAssets';
+import BrandMark from './ui/BrandMark';
 
 export default function FinalCTASection() {
   return (
@@ -9,13 +9,10 @@ export default function FinalCTASection() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-[2rem] border border-white/10 bg-dark-100/85 p-8 md:p-12 lg:p-16 text-center shadow-2xl shadow-black/20">
-          <img
-            src={BRAND_ASSETS.emblemPrimary}
-            alt="Emblema ADEEMA"
-            className="mx-auto mb-6 h-16 md:h-20 w-auto object-contain"
-            loading="lazy"
-            decoding="async"
-            referrerPolicy="no-referrer"
+          <BrandMark
+            size="lg"
+            className="mb-6 justify-center"
+            badgeClassName="shadow-[0_0_35px_rgba(0,229,255,0.12)]"
           />
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-4 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full">
             CTA final
