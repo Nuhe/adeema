@@ -14,9 +14,6 @@ export default function FinalCTASection() {
             className="mb-6 justify-center"
             badgeClassName="shadow-[0_0_35px_rgba(0,229,255,0.12)]"
           />
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-4 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full">
-            CTA final
-          </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-5">
             Llevá tu proyecto, comunidad o institución al ecosistema ADEEMA.
           </h2>

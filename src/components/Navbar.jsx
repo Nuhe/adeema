@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Button from './ui/Button';
-import BrandMark from './ui/BrandMark';
+import { BRAND_ASSETS } from '../assets/brandAssets';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
@@ -34,59 +34,64 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-[4.5rem]">
-          {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-3 group">
-            <BrandMark
-              size="sm"
-              withWordmark
-              className="transition-transform duration-200 group-hover:scale-[1.02]"
-              wordmarkClassName="hidden sm:block"
+        <div className="flex items-center h-16 md:h-[4.5rem] gap-4">
+
+          {/* Logo — solo wordmark, sin círculo */}
+          <a href="#inicio" className="flex-shrink-0 group">
+            <img
+              src={BRAND_ASSETS.logoOnDark}
+              alt="ADEEMA"
+              className="h-8 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+              loading="eager"
+              decoding="async"
+              referrerPolicy="no-referrer"
             />
-            <span className="sr-only">ADEEMA</span>
           </a>
 
-          {/* CTA */}
-          <div className="hidden md:flex items-center gap-3">
-            <Button variant="fan" size="sm" href="#fan">
-              Área FAN
-            </Button>
-            <Button variant="primary" size="sm" href="#sumate" className="shadow-primary-900/30">
-              Sumate
-            </Button>
+          {/* Nav centrada — desktop */}
+          <nav className="hidden md:flex flex-1 items-center justify-center overflow-x-auto no-scrollbar">
+            <div className="flex items-center gap-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="nav-link shrink-0 px-2.5 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-slate-400 transition-colors duration-200 hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </nav>
+
+          {/* Botones CTA + toggle mobile */}
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <div className="hidden md:flex items-center gap-3">
+              <Button variant="fan" size="sm" href="#fan">
+                Área FAN
+              </Button>
+              <Button variant="primary" size="sm" href="#sumate" className="shadow-primary-900/30">
+                Sumate
+              </Button>
+            </div>
+
+            <button
+              className="md:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? (
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? (
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
         </div>
-
-        <nav className="hidden md:block border-t border-white/5">
-          <div className="flex items-center gap-2 overflow-x-auto py-3 no-scrollbar">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="shrink-0 rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 transition-all duration-200 hover:border-primary-400/40 hover:bg-primary-500/10 hover:text-white"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </nav>
       </div>
 
       {/* Mobile menu */}
