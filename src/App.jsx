@@ -8,9 +8,10 @@ import FinalCTASection from './components/FinalCTASection';
 const InstitutionalSection = lazy(() => import('./components/InstitutionalSection'));
 const MissionVisionSection = lazy(() => import('./components/MissionVisionSection'));
 const FanSection = lazy(() => import('./components/FanSection'));
-const LeaguesSection = lazy(() => import('./components/LeaguesSection'));
+const AcademySection = lazy(() => import('./components/AcademySection'));
 const CompetitionsSection = lazy(() => import('./components/CompetitionsSection'));
 const SponsorsSection = lazy(() => import('./components/SponsorsSection'));
+const LeaguesSection = lazy(() => import('./components/LeaguesSection'));
 
 function SectionsFallback() {
   return (
@@ -35,9 +36,10 @@ export default function App() {
           <InstitutionalSection />
           <MissionVisionSection />
           <FanSection />
-          <LeaguesSection />
+          <AcademySection />
           <CompetitionsSection />
           <SponsorsSection />
+          <LeaguesSection />
           <FinalCTASection />
         </Suspense>
       </main>

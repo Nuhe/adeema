@@ -3,9 +3,9 @@ import Card from './ui/Card';
 
 const partners = [
   { icon: '🏛️', label: 'Municipios' },
-  { icon: '⚽', label: 'Clubes Deportivos' },
+  { icon: '⚽', label: 'Clubes' },
   { icon: '🎓', label: 'Universidades' },
-  { icon: '💡', label: 'Centros Tecnológicos' },
+  { icon: '💡', label: 'Centros Tech' },
   { icon: '🏆', label: 'Organizadores' },
   { icon: '💻', label: 'Empresas Tech' },
 ];
@@ -13,8 +13,8 @@ const partners = [
 const disciplines = [
   { name: 'Esports', icon: '🎮', desc: 'Videojuegos competitivos con formato profesional' },
   { name: 'SimRacing', icon: '🏎️', desc: 'Simulación de automovilismo de alto rendimiento' },
-  { name: 'Competencias Tecnológicas', icon: '⚙️', desc: 'Desafíos digitales, robótica y estrategia' },
-  { name: 'Deportes Electromecánicos', icon: '🤖', desc: 'Destreza física y tecnología integradas' },
+  { name: 'Competencias Tech', icon: '⚙️', desc: 'Desafíos digitales, robótica y estrategia' },
+  { name: 'Electromecánicos', icon: '🤖', desc: 'Destreza física y tecnología integradas' },
   { name: 'Nuevas Disciplinas', icon: '🚀', desc: 'Categorías emergentes e innovación continua' },
 ];
 
@@ -35,16 +35,13 @@ export default function InstitutionalSection() {
               <span className="text-gradient">deportivo tecnológico</span>{' '}
               de Argentina
             </h2>
-            <div className="space-y-4 text-slate-400 leading-relaxed">
+            <div className="space-y-3 text-slate-400 leading-relaxed">
               <p>
                 ADEEMA desarrolla, promueve y organiza los deportes electrónicos y electromecánicos en Argentina.
-                Articulamos jugadores, clubes, ligas, instituciones educativas, marcas y organizadores dentro de
-                un mismo ecosistema competitivo.
+                Articulamos jugadores, clubes, ligas, instituciones y organizadores dentro de un mismo ecosistema competitivo.
               </p>
               <p>
-                Nuestro foco está en consolidar competencias estructuradas, abrir oportunidades para el talento
-                emergente y construir una plataforma con visión <span className="text-white font-medium">federal</span>,
-                sostenible y profesional.
+                Nuestro foco: competencias estructuradas, talento emergente y una plataforma con visión <span className="text-white font-medium">federal</span>, sostenible y profesional.
               </p>
             </div>
           </div>
@@ -86,18 +83,16 @@ export default function InstitutionalSection() {
           </div>
         </div>
 
-        {/* Federal badge */}
-        <div className="mt-10 rounded-2xl border border-primary-500/20 bg-primary-500/5 p-6 flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
-          <div className="text-5xl flex-shrink-0">🗺️</div>
-          <div>
-            <h3 className="text-white font-bold text-xl mb-2">Alcance Federal</h3>
-            <p className="text-slate-400 leading-relaxed">
-              ADEEMA opera con una visión federal, llegando a jugadores, instituciones y organizadores de todas las
-              provincias argentinas. Cada liga, cada torneo y cada iniciativa apunta a construir un ecosistema
-              verdaderamente nacional, inclusivo y accesible.
-            </p>
+          <div className="mt-8 rounded-2xl border border-primary-500/20 bg-primary-500/5 p-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="text-4xl flex-shrink-0">🗺️</div>
+            <div>
+              <h3 className="text-white font-bold text-lg mb-1">Alcance Federal</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                ADEEMA opera con visión federal, llegando a jugadores e instituciones de todas las provincias.
+                Cada liga y torneo apunta a un ecosistema nacional, inclusivo y accesible.
+              </p>
+            </div>
           </div>
-        </div>
       </div>
     </section>
   );

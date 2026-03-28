@@ -34,7 +34,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16 md:h-[4.5rem] gap-4">
+        <div className="flex items-center justify-between h-16 md:h-[4.5rem] gap-4">
 
           {/* Logo — solo wordmark, sin círculo */}
           <a href="#inicio" className="flex-shrink-0 group">
